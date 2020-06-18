@@ -1,8 +1,8 @@
 import bpy
 
 # Delete the cube
-bpy.data.objects['Cube'].select_set(True)
-bpy.ops.object.delete()
+if 'Cube' in bpy.data.objects:
+    objects.remove(objects['Cube'])
 
 # Create a new mesh
 ob_name = "triangle"
