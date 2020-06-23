@@ -1,5 +1,9 @@
 import bpy
 
+objects = bpy.data.objects
+meshes = bpy.data.meshes
+collection = bpy.data.collections[0]
+
 # Delete the cube
 if 'Cube' in bpy.data.objects:
     objects.remove(objects['Cube'])
@@ -7,10 +11,6 @@ if 'Cube' in bpy.data.objects:
 # Create a new mesh
 ob_name = "triangle"
 mesh_name = ob_name + "_mesh"
-
-objects = bpy.data.objects
-meshes = bpy.data.meshes
-collection = bpy.data.collections[0]
 
 if mesh_name in meshes:
     meshes.remove(meshes[mesh_name])
